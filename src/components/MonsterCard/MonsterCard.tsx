@@ -1,19 +1,30 @@
 import React from "react";
-
-type MonsterCardProps = {
-  name: string;
-  image: string;
-  type: string[];
-  id: string;
-};
+import { MonsterCardProps, typeColors } from "../Types/Types";
 
 const MonsterCard: React.FC<MonsterCardProps> = ({ name, image, type, id }) => {
   return (
-    <div className="monster-card">
+    <div
+      className="monster-card"
+      onClick={() =>
+        alert("To be linkable for the monster details page in the future!")
+      }
+    >
       <h4>#{id}</h4>
       <img src={image} alt={name} />
-      <h3>{name}</h3>
-      <p>Type: {type.join(", ")}</p>
+      <div className="name-types-wrapper">
+        <h3>{name}</h3>
+        <div className="types">
+          {type.map((t) => (
+            <span
+              key={t}
+              className="type-circle"
+              style={{ backgroundColor: typeColors[t.toLowerCase()] }}
+            >
+              &nbsp;
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import MonsterList from "../components/MonsterList";
 
@@ -12,4 +11,8 @@ export default meta;
 
 type Story = StoryObj<typeof MonsterList>;
 
-export const Default: Story = {};
+export const List: Story = {
+  args: {
+    isHeadingVisible: true,
+  },
+};

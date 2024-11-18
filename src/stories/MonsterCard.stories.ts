@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof MonsterCard>;
 
-export const Default: Story = {
+export const Card: Story = {
   args: {
     name: "Pikachu",
     image:

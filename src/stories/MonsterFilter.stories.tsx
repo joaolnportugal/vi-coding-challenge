@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof MonsterFilter>;
 
-export const Default: Story = {
+export const Filter: Story = {
   args: {
     types: ["Fire", "Water", "Grass", "Electric"],
     selectedType: "",
